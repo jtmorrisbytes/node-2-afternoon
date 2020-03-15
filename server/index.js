@@ -14,7 +14,7 @@ app.post("/api/messages", (req, res) => {
   } else {
     return messageController.createMessage(req.body.text, req.body.date);
   }
-  res.status(501).json({ error: "not implemented" });
+  //   res.status(501).json({ error: "not implemented" });
 });
 
 app.listen(3001, () => {
