@@ -26,7 +26,7 @@ app.put("/api/messages/:id", (req, res) => {
   res.json(
     messageController.updateMessage(req.params.id, {
       text: req.body.text,
-      time: request.body.time
+      time: req.body.time
     })
   );
 });
