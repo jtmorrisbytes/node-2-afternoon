@@ -6,7 +6,7 @@ const app = express();
 app.use(bodyParser.json());
 
 app.get("/api/messages", (req, res) => {
-  res.sendStatus(20);
+  res.json(messageController.getMessages());
 });
 
 app.listen(3001, () => {
