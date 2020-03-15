@@ -15,7 +15,9 @@ createMessage = (text, time) => {
 getMessages = () => {
   return messages;
 };
-updateMessage = (messageId, params = { text: null, time: null }) => {};
+updateMessage = (messageId, params = { text: null, time: null }) => {
+  return messages;
+};
 deleteMessage = messageId => {};
 
 module.exports = {
