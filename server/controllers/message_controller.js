@@ -16,7 +16,17 @@ getMessages = () => {
   return messages;
 };
 updateMessage = (messageId, params = { text: null, time: null }) => {
-  return messages;
+  return messages.map(message => {
+    if (message.id === messageId) {
+      if (params.text) {
+        message.text = params.text;
+      }
+      if (params.time) {
+        message.time = params.time;
+      }
+    }
+    return message;
+  });
 };
 deleteMessage = messageId => {};
 
