@@ -39,7 +39,7 @@ app.delete("/api/messages/:id", (req, res) => {
       error: { status: 409, message: "missing id in request", params: "id" }
     });
   } else {
-    return messageController.deleteMessage(req.params.id);
+    res.json(messageController.deleteMessage(req.params.id));
   }
 });
 app.listen(3001, () => {
