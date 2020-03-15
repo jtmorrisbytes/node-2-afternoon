@@ -28,7 +28,14 @@ updateMessage = (messageId, params = { text: null, time: null }) => {
     return message;
   });
 };
-deleteMessage = messageId => {};
+deleteMessage = messageId => {
+  if (messageId) {
+    return messages.filter(message => {
+      return message.id != messageID;
+    });
+  }
+  return messages;
+};
 
 module.exports = {
   createMessage,
