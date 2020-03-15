@@ -33,11 +33,12 @@ app.put("/api/messages/:id", (req, res) => {
     })
   );
 });
-app.delete("/api/messages/:id",(req,res)=>{
-    if(!req.params.id) {
-        
-    }
-
+app.delete("/api/messages/:id", (req, res) => {
+  if (!req.params.id) {
+    res.status(409).json({
+      error: { status: 409, message: "missing id in request", params: "id" }
+    });
+  }
 });
 app.listen(3001, () => {
   console.log("api server listening on port 3001");
