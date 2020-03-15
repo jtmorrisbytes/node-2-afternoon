@@ -30,9 +30,9 @@ updateMessage = (messageId, params = { text: null, time: null }) => {
 };
 deleteMessage = messageId => {
   if (messageId) {
-    return messages.filter(message => {
+    return (messages = messages.filter(message => {
       return message.id != messageId;
-    });
+    }));
   }
   return messages;
 };
