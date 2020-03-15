@@ -18,7 +18,11 @@ app.post("/api/messages", (req, res) => {
 });
 app.put("/api/messages", (req, res) => {
   if (!req.body.id) {
-    res.status(409).json({ error: 409 });
+    res
+      .status(409)
+      .json({
+        error: { status: 409, message: "missing id in request", body: "id" }
+      });
   }
   res.json(messageController.updateMessage());
 });
