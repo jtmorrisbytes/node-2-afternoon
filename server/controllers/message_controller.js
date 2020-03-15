@@ -2,13 +2,13 @@ let messages = [];
 let id = 0;
 
 const messageModel = {
-  id: -1,
+  id: Number,
   text: "",
   date: ""
 };
 
 createMessage = (text, date) => {
-  messages.push({ ...messageModel, text, date });
+  messages.push({ ...messageModel, id, text, date });
 };
 getMessages = () => {
   return messages;
