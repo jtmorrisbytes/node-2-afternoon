@@ -1,7 +1,7 @@
 let messages = [];
 let id = 0;
 
-createMessage = () => {};
+createMessage = (text, date) => {};
 getMessages = () => {
   return messages;
 };
