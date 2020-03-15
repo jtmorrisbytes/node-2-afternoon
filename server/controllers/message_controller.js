@@ -9,7 +9,7 @@ const messageModel = {
 
 createMessage = (text, date) => {
   messages.push({ ...messageModel, id, text, date });
-  this.id++;
+  id++;
 };
 getMessages = () => {
   return messages;
