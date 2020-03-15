@@ -33,7 +33,12 @@ app.put("/api/messages/:id", (req, res) => {
     })
   );
 });
-app.delete("/api/messages/:id");
+app.delete("/api/messages/:id",(req,res)=>{
+    if(!req.params.id) {
+        
+    }
+
+});
 app.listen(3001, () => {
   console.log("api server listening on port 3001");
 });
