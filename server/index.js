@@ -1,5 +1,5 @@
 const express = require("express");
-bodyParser = require("body-parser");
+const bodyParser = require("body-parser");
 const messageController = require("./controllers/message_controller");
 const app = express();
 
