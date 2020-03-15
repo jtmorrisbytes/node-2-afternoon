@@ -1,5 +1,6 @@
 const express = require("express");
 const bodyParser = require("body-parser");
+const morgan = require("morgan");
 const messageController = require("./controllers/message_controller");
 const app = express();
 
