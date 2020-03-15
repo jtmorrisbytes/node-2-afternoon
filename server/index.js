@@ -5,7 +5,7 @@ const messageController = require("./controllers/message_controller");
 const app = express();
 
 app.use(bodyParser.json());
-
+app.use(morgan("tiny"));
 app.get("/api/messages", (req, res) => {
   res.json(messageController.getMessages());
 });
