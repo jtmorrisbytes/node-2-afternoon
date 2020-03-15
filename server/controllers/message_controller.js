@@ -2,7 +2,7 @@ let messages = [];
 let id = 0;
 
 const messageModel = {
-  id: 0,
+  id: -1,
   text: "",
   date: ""
 };
