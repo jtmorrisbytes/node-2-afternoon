@@ -34,7 +34,7 @@ app.put("/api/messages/:id", (req, res) => {
   );
 });
 app.delete("/api/messages/:id", (req, res) => {
-  if (req.params.id != null) {
+  if (req.params.id == undefined) {
     res.status(409).json({
       error: { status: 409, message: "missing id in request", params: "id" }
     });
