@@ -4,11 +4,11 @@ let id = 0;
 const messageModel = {
   id: Number,
   text: "",
-  date: ""
+  time: ""
 };
 
-createMessage = (text, date) => {
-  messages.push({ ...messageModel, id, text, date });
+createMessage = (text, time) => {
+  messages.push({ ...messageModel, id, text, time });
   id++;
   return messages;
 };
