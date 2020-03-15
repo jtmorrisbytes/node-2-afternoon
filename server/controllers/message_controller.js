@@ -17,7 +17,7 @@ getMessages = () => {
 };
 updateMessage = (messageId, params = { text: null, time: null }) => {
   return messages.map(message => {
-    if (message.id === messageId) {
+    if (message.id == messageId) {
       if (params.text) {
         message.text = params.text;
       }
