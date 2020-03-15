@@ -1,6 +1,11 @@
 let messages = [];
 let id = 0;
 
+const messageModel = {
+  text: "",
+  date: ""
+};
+
 createMessage = (text, date) => {};
 getMessages = () => {
   return messages;
