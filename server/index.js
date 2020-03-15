@@ -10,7 +10,7 @@ app.get("/api/messages", (req, res) => {
 });
 app.post("/api/messages", (req, res) => {
   if (!req.body.text && !req.body.time) {
-    res.sendStatus(409);
+    res.json(messageController.getMessages());
   } else {
     res.json(messageController.createMessage(req.body.text, req.body.time));
   }
