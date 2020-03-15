@@ -1,11 +1,14 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const morgan = require("morgan");
+const path = require("path");
+
 const messageController = require("./controllers/message_controller");
 const app = express();
 
 app.use(bodyParser.json());
 app.use(morgan("tiny"));
+app.use(express.static(path.join("..", "public", "build")));
 app.get("/api/messages", (req, res) => {
   res.json(messageController.getMessages());
 });
@@ -30,6 +33,7 @@ app.put("/api/messages/:id", (req, res) => {
     })
   );
 });
+app.delete("/api/messages/:id");
 app.listen(3001, () => {
   console.log("api server listening on port 3001");
 });
