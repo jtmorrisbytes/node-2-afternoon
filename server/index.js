@@ -12,7 +12,7 @@ app.post("/api/messages", (req, res) => {
   if (!req.body.text && req.body.date) {
     res.sendStatus(409);
   } else {
-    return messageController.getMessages(req.body.text, req.body.date);
+    return messageController.createMessage(req.body.text, req.body.date);
   }
   res.status(501).json({ error: "not implemented" });
 });
