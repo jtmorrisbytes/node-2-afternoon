@@ -9,7 +9,7 @@ app.get("/api/messages", (req, res) => {
   res.json(messageController.getMessages());
 });
 app.post("/api/messages", (req, res) => {
-  if (!req.body.text && req.body.date) {
+  if (!req.body.text && !req.body.time) {
     res.sendStatus(409);
   } else {
     res.json(messageController.createMessage(req.body.text, req.body.date));
