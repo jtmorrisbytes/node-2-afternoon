@@ -17,14 +17,14 @@ app.post("/api/messages", (req, res) => {
   }
   //   res.status(501).json({ error: "not implemented" });
 });
-app.put("/api/messages", (req, res) => {
-  if (!req.body.id) {
+app.put("/api/messages/:id", (req, res) => {
+  if (!req.params.id) {
     res.status(409).json({
-      error: { status: 409, message: "missing id in request", body: "id" }
+      error: { status: 409, message: "missing id in request", params: "id" }
     });
   }
   res.json(
-    messageController.updateMessage(messageId, {
+    messageController.updateMessage(req.params.id, {
       text: req.body.text,
       time: request.body.time
     })
